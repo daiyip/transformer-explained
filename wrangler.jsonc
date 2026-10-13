@@ -1,0 +1,10 @@
+// The site's Worker (scholeo-ai/site-kit, deploy/wrangler.jsonc): serves the
+// MkDocs build in ./site, nothing else.
+{
+  "name": "scholeo-transformer-explained",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./site",
+    "not_found_handling": "404-page"
+  }
+}

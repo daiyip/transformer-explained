@@ -1,0 +1,9 @@
+# From scholeo-ai/site-kit deploy/_headers. MkDocs copies this file into site/, the folder the Worker serves.
+# Cloudflare reads this file and does not serve it. Loosen only what the site needs and say why here, as music does
+# for the microphone and camera. X-Frame-Options keeps other sites from framing the pages: a site that others embed
+# (atlas with ?embed=1) drops that line.
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()

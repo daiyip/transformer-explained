@@ -36,7 +36,7 @@ pip install -r requirements-docs.txt
 mkdocs serve
 ```
 
-Notebooks are committed with their outputs, so the site build does not re-run them. The `Publish site` workflow deploys to GitHub Pages on every push to `main` once Pages is enabled with "GitHub Actions" as the source (Settings, Pages).
+Notebooks are committed with their outputs, so the site build does not re-run them. The `deploy` workflow builds the site and deploys it to the Cloudflare Worker `scholeo-transformer-explained` (`wrangler.jsonc`) on every push to `main`, through `scholeo-ai/site-kit`; it works once the repo is in `scholeo-ai`. Until the domain moves to the Worker, the `Publish site` workflow still deploys to GitHub Pages.
 
 ## Checking results across seeds
 
